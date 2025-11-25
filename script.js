@@ -40,19 +40,15 @@ form.addEventListener("submit", (event) => {
 function validateForm() {
     let isValid = true;
     const username = usernameInput.value;
-    const usernamePattern = /^[A-Za-z0-9]+$/; //username pattern regex
-    //validation for username
-    if (!usernamePattern.test(username)) {
-        console.error("Please enter a valid username.");
-        showInputError(document.getElementById("username"), "Please enter a valid username.");
+    if (!username) {
+        console.error("Please enter a username.");
+        showInputError(document.getElementById("username"), "Please enter a username.");
         isValid = false;
     }
         
     //complex email validation
     const emailInputValue = emailInput.value;
-    const complexEmailPattern = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i; //email pattern regex.
-
-    if(!complexEmailPattern.test(emailInputValue)) {
+    if(!emailInputValue) {
         console.error("Please enter a valid email address.");
         showInputError(document.getElementById("email"), "Please enter a valid email address.");
         isValid = false;
@@ -114,7 +110,7 @@ function showInputError(inputElement, message) {
     const container = inputElement.closest(".input-container");
 
     const errorDisplay = document.createElement("span");
-    errorDisplay.innerText = message;
+    errorDisplay.innerHTML = message;
     errorDisplay.className = "error";
     errorDisplay.setAttribute("role", "alert");
 
