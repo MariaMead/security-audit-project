@@ -1,0 +1,142 @@
+body {
+	background-image: url('/image/super_mario.jpg');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-family: "Arial", sans-serif;
+	background-color: #f12525a4;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	height: 100%;
+	overflow: auto;
+	
+}
+
+form {
+	width: 90%;
+	max-width: 40.25em;
+	background: hsla(64, 91%, 91%, 0.945);
+	padding: 1em;
+	border-radius: 1em;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+	text-align: center;
+	overflow-y: auto;
+	
+}
+
+.input-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 5px;
+
+  }
+
+  h1 {
+	font-weight: bold;
+	font-size: 40px;
+	font-family: fantasy;
+	color:crimson;
+	text-shadow: 4px 4px black;
+  }
+
+.title {
+	display: flex;
+	justify-content: flex-start;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px;
+
+  }
+
+label {
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 5px;
+}
+  
+
+input[type="radio"],
+input[type="checkbox"] {
+	width: 16px;
+	height: 16px;
+  	margin-right: 10px;
+	cursor: pointer;
+}
+
+#options {
+	font-size: 14px;
+	font-weight: bold;
+	background-color:rgb(118, 238, 118);
+}
+
+#text-area {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	color: black;
+}
+  
+
+input,
+select,
+textarea {
+	width: 95%;
+	padding: 0.625em;
+	margin-top: 0.3125em;
+	margin-bottom: 0.9375em;
+	border: 3px solid #113469;
+	border-radius: 0.25em;
+} 
+
+button {
+	padding: 0.625em 1.25em;
+	background-color: #024257;
+	color: white;
+	border:#333;
+	border-radius: 0.3125em;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #750554;
+}
+
+.error {
+    color: darkred;
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: block;
+    
+}
+
+
+
+@media (max-width: 600px) {
+    body {
+        padding:10px;
+		height: auto;
+		width: auto;
+    }
+
+	form {
+		width:auto;
+		padding: 15px;
+		
+	}
+}
+
+@media (max-width: 400px) {
+	h1 {
+		font-size: 24px;
+	}
+
+	form {
+		width: auto;
+		padding: 20px;
+	}
+}
