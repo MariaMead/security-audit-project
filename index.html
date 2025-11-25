@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Survey Form</title>
+	</head>
+    <body>
+		<form id="superMarioBrosSurvey" action="httpbin.org/post" method="POST">
+			<h1>Super Mario Brothers Survey</h1>
+            
+            <!-- Additional form elements will be added here -->
+             <fieldset>
+                <legend>Personal Information</legend>
+                <div class="input-container">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" pattern="^[A-Za-z0-9]+$"/>
+                        <span id="usernameError" class="error" role="alert" aria-live="assertive"></span>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" />
+                        <span id="emailError" class="error"></span>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="birthday">Date of Birth:</label>
+                        <input type="date" id="birthday" name="birthday" />
+                        <span id="birthdayError" class="error"></span>
+                    </div>
+            </fieldset>
+
+            <fieldset>
+            <legend>Survey Questions</legend>
+                <div class="input-container">
+                    <div class="title">What is your favorite character?</div>
+                    <label for="mario">
+                        <input type="radio" id="mario" name="character" value="Mario">Mario</label>
+                    <label for="luigi">
+                        <input type="radio" id="luigi" name="character" value="Luigi">Luigi</label>
+                    <label for="peach">
+                        <input type="radio" id="peach" name="character" value="Peach">Peach</label>
+                    <label for="yoshi">
+                        <input type="radio" id="yoshi" name="character" value="Yoshi">Yoshi</label>
+                    <label for="bowser">
+                        <input type="radio" id="bowser" name="character" value="Bowser">Bowser</label>
+                    <span id="characterError" class="error"></span>
+                </div>
+
+                <div class="input-container">
+                    <div class="title">Pick your favorite power-ups</div>
+                    <label for="super-mushroom">
+                        <input type="checkbox" id="power-ups" name="power-ups" value="super-mushroom">Super Mushroom</label>
+                    <label for="fire-flower">
+                        <input type="checkbox" id="power-ups" name="power-ups" value="fire-flower">Fire Flower</label>                    
+                    <label for="star">
+                        <input type="checkbox" id="power-ups" name="power-ups" value="star">Star</label>                  
+                    <label for="cape-feather">
+                        <input type="checkbox" id="power-ups" name="power-ups" value="cape-feather">Cape Feather</label>
+                    <span id="powerUpsError" class="error"></span>
+                </div>
+
+                <div class="input-container">
+                    <label for="options">What is your favorite Mario game?</label>
+                        <select name="options" id="options" area-label="Select your favorite Mario game">
+                            <option value="blank">Select an option</option>
+                            <option value="mario-bros">Mario Bros.</option>
+                            <option value="super-mario-bros">Super Mario Bros.</option>
+                            <option value="super-mario-world">Super Mario World</option>
+                            <option value="super-mario-odyssey">Super Mario Odyssey</option>
+                            <option value="super-mario-64">Super Mario 64</option>
+                        </select>
+                        <span id="optionsError" class="error"></span>
+                    
+                </div>
+
+                <div class="input-container">
+                    <label for="text-area">Please tell me about your favorite game and why?</label>
+                        <textarea id="text-area" name="text-area" rows="10" cols="40" ></textarea>
+                        <span id="textAreaError" class="error"></span>
+                </div>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+		</form>
+		<script src="script.js"></script>
+	</body>
+</html>
