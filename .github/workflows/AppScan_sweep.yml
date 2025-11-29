@@ -1,0 +1,27 @@
+name: "HCL AppScan CodeSweep"
+on:
+  push:
+    branches: [main]
+  
+permissions: {}
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: read
+      # To report GitHub Actions status checks
+      statuses: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run AppScan CodeSweep
+        uses: HCL-TECH-SOFTWARE/appscan-codesweep-action@v2.1
+        with:
+          personal_scan: true
+          scan_base_name: "MyScan"
+        env: 
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
