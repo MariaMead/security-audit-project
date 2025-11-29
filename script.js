@@ -44,8 +44,7 @@ function validateForm() {
         console.error("Please enter a username.");
         showInputError(document.getElementById("username"), "Please enter a username.");
         isValid = false;
-    }
-        
+    }  
     //complex email validation
     const emailInputValue = emailInput.value;
     if(!emailInputValue) {
@@ -53,7 +52,6 @@ function validateForm() {
         showInputError(document.getElementById("email"), "Please enter a valid email address.");
         isValid = false;
     }
-
     //Date of birth validation
     const birthday = document.getElementById("birthday").value;
     if(birthday === "") {
@@ -61,7 +59,6 @@ function validateForm() {
         showInputError(document.getElementById("birthday"), "Please enter your date of birth.");
         isValid = false;
     }
-
     //radio button validation
     const characterButton = document.querySelector('input[name="character"]:checked');
     if(!characterButton) {
@@ -69,7 +66,6 @@ function validateForm() {
         showInputError(document.querySelector('input[name="character"]'), "Please choose an option.");
         isValid = false;
     }
-
     //checkbox button validation
     const powerUps = document.querySelectorAll('input[name="power-ups"]:checked');
     if(powerUps.length === 0) {
