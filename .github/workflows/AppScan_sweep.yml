@@ -25,6 +25,6 @@ jobs:
         uses: HCL-TECH-SOFTWARE/appscan-codesweep-action@c9d5958469145a0aaf3ac41eaa0190e7757e4eba
         with:
           personal_scan: true
-          scan_base_name: "MyScan
+          scan_base_name: "MyScan"
         env: 
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
